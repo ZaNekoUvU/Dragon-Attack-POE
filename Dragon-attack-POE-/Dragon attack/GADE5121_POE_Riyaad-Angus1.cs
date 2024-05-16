@@ -56,7 +56,7 @@ namespace Dragon_attack
         int spAttackTwo = 0;
         int blockTwo = 0;
         
-        //Constants of each individual dragon types' stats
+        //Constants of each individual dragon types' stats, including Health Points, Attack, Special attack and Block
         const int iceDragHp = 30;
         const int iceDragAttack = 4;
         const int iceDragSPAttack = 9;

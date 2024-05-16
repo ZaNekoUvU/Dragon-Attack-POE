@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\downloads\\dragon attack poe final build\\dragon-attack-poe-\\dragon attack\\gade5121_poe_riyaad-angus1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\gade5121_poe_riyaad-angus1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\downloads\\dragon attack poe final build\\dragon-attack-poe-\\dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\downloads\\dragon attack poe final build\\dragon-attack-poe-\\dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\downloads\\dragon attack poe final build\\dragon-attack-poe-\\dragon attack\\gade5121_poe_riyaad-angus1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\gade5121_poe_riyaad-angus1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BattlePhase.cs",
+              "DocumentMoniker": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
+              "RelativeDocumentMoniker": "Dragon attack\\BattlePhase.cs",
+              "ToolTip": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
+              "RelativeToolTip": "Dragon attack\\BattlePhase.cs",
+              "ViewState": "AQIAAEgCAAAAAAAAAAAqwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:32:39.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GADE5121_POE_Riyaad-Angus1.cs",
+              "DocumentMoniker": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "RelativeDocumentMoniker": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "ToolTip": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "RelativeToolTip": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:32:35.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GADE5121_POE_Riyaad-Angus1.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "RelativeDocumentMoniker": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
+              "ToolTip": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs [Design]",
+              "RelativeToolTip": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:32:32.265Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BattlePhase.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
+              "RelativeDocumentMoniker": "Dragon attack\\BattlePhase.cs",
+              "ToolTip": "D:\\Users\\Angus\\Downloads\\Dragon Attack POE Final Build\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs [Design]",
+              "RelativeToolTip": "Dragon attack\\BattlePhase.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T19:32:31.185Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

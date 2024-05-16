@@ -19,7 +19,7 @@ namespace Dragon_attack
         string dragNameOne;
         string dragNameTwo; 
 
-        string dragTypeOne;
+        string dragTypeOne; 
         string dragTypeTwo;
 
         //stats for player one
