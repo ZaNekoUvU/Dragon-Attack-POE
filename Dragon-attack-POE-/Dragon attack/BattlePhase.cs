@@ -17,9 +17,9 @@ namespace Dragon_attack
         string playerNameOne;
         string playerNameTwo;
         string dragNameOne;
-        string dragNameTwo; 
+        string dragNameTwo;
 
-        string dragTypeOne; 
+        string dragTypeOne;
         string dragTypeTwo;
 
         //stats for player one
@@ -44,25 +44,27 @@ namespace Dragon_attack
         bool rollButtonOne = true;
         bool rollButtonTwo = true;
 
-        
+        bool playerOneRest = false;
+        bool playerTwoRest = false;
+
         int turn = 1; //turn variable helps to keep track of which players turn it is
         int count = 0; //count variable is used to keep track of the amount plays that have occured within a turn
 
         //these are global variables to allow the initiative method to compare the two initiative rolls without re-declaring them each time the user clicks the roll buttons
-        int compareCount1 = 0; 
-        int compareCount2 = 0; 
+        int compareCount1 = 0;
+        int compareCount2 = 0;
 
         //these are global variables that are used for when the player clicks the roll buttons, when they are clicked they will roll for a random number from 1 to 6
         int initiativeRollOne = 0;
         int initiativeRollTwo = 0;
 
-        string battleLog = ""; //battle log is a string that will be added to after each player's turn. It will be displayed in the battle log text box area
+        string battleLog = "------------------------------------------------------------------\r\n"; //battle log is a string that will be added to after each player's turn. It will be displayed in the battle log text box area
 
         //this method runs the moment the form loads
-        public BattlePhase(string[] p1Data, int[] p1Values , string[] p2Data, int[] p2Values) //previous data from the first form is being passed to this form 
+        public BattlePhase(string[] p1Data, int[] p1Values, string[] p2Data, int[] p2Values) //previous data from the first form is being passed to this form 
         {
             InitializeComponent();
-            
+
             //assigning passed data to store player one's information inside of global variables
             playerNameOne = p1Data[0];
             dragNameOne = p1Data[1];
@@ -86,12 +88,13 @@ namespace Dragon_attack
             blockAttackTwo = p2Values[3];
 
             initiative(); //calls the initiative method which will then roll the initiative roll variables on start, and if both initiative rolls are the same it the players will need to reroll by themselves
+   
         }
 
         //this method runs if the attack button is clicked and it determines which dragon attacks and determines if the other dragon is defending  
         private void attackBtn_Click(object sender, EventArgs e)
-        { 
-            
+        {
+
             if (playerOneTurn) //determines if it is player one's turn
             {
                 if (blockBoolTwo) //true if player two's dragon is defending
@@ -99,7 +102,7 @@ namespace Dragon_attack
                     //attack is nullified if attack is less than the block stat of player two's dragon
                     if (blockAttackTwo >= attackOne)
                     {
-                        battleLog += "The attack was nullified\r\n"; //saves string to battle log to be output into the battleLogTxt
+                        battleLog += "\r\nThe attack was nullified\r\n------------------------------------------------------------------\r\n"; //saves string to battle log to be output into the battleLogTxt
                     }
                     //attack will be reduced by the block stat of player two's dragon
                     else if (attackOne > blockAttackTwo)
@@ -119,13 +122,13 @@ namespace Dragon_attack
                 if (hpTwo <= 0)
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player two's dragon's death. This is then added to the battleLog string variable
-                    battleLog += dragNameOne + " attacks " + dragNameTwo + " for " + attackOne + " damage. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne + " is the winner";
+                    battleLog += dragNameOne + " attacks " + dragNameTwo + " for " + attackOne + " damage. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne + " is the winner\r\n------------------------------------------------------------------\r\n";
                     deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead 
                 }
                 else
                 {
                     //adds the damage calculation and explains the event of this player's turn which is saved to the battleLog variable
-                    battleLog += dragNameOne + " attacks " + dragNameTwo + " for " + attackOne + " damage. " + dragNameTwo + " has " + hpTwo + " hp left\r\n";
+                    battleLog += dragNameOne + " attacks " + dragNameTwo + " for " + attackOne + " damage. " + dragNameTwo + " has " + hpTwo + " hp left\r\n------------------------------------------------------------------\r\n";
                 }
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
@@ -143,7 +146,7 @@ namespace Dragon_attack
                     //attack is nullified if attack is less than the block stat of player one's dragon
                     if (blockAttackOne >= attackTwo)
                     {
-                        battleLog += "The attack was nullified\r\n"; //saves string to battle log to be output into the battleLogTxt
+                        battleLog += "\r\nThe attack was nullified\r\n------------------------------------------------------------------\r\n"; //saves string to battle log to be output into the battleLogTxt
                     }
                     //attack will be reduced by the block stat of player one's dragon
                     else if (attackTwo > blockAttackOne)
@@ -163,15 +166,15 @@ namespace Dragon_attack
                 if (hpOne <= 0)
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player one's dragon's death. This is then added to the battleLog string variable
-                    battleLog += dragNameTwo + " attacks " + dragNameOne + " for " + attackTwo + " damage. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner";
+                    battleLog += dragNameTwo + " attacks " + dragNameOne + " for " + attackTwo + " damage. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner\r\n------------------------------------------------------------------\r\n";
                     deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
                 }
                 else
                 {
                     //adds the damage calculation and explains the event of this player's turn which is saved to the battleLog variable
-                    battleLog += dragNameTwo + " attacks " + dragNameOne + " for " + attackTwo + " damage. " + dragNameOne + " has " + hpOne + " hp left\r\n";
+                    battleLog += dragNameTwo + " attacks " + dragNameOne + " for " + attackTwo + " damage. " + dragNameOne + " has " + hpOne + " hp left\r\n------------------------------------------------------------------\r\n";
                 }
-                
+
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt 
 
                 turn--; // turn is decremented so that it is now player one's turn
@@ -179,25 +182,30 @@ namespace Dragon_attack
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
+            
+
             if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be greater than 2 and less than 1
             {
 
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
+            Rest(playerTwoRest, playerOneRest);
         }
 
         //this method runs if the special attack button is clicked and it determines which dragon attacks and determines if the other dragon is defending
         private void specialAttackBtn_Click(object sender, EventArgs e)
-        {   
-            
+        {
+
             if (playerOneTurn) //determines if it is player one's turn
             {
+                playerOneRest = true;
+
                 if (blockBoolTwo) //true if player two's dragon is defending
                 {
                     //special attack is nullified if special attack is less than the block stat of player two's dragon
                     if (blockAttackTwo >= spAttackOne)
                     {
-                        battleLog += "The attack was nullified\r\n"; //saves string to battle log to be output into the battleLogTxt
+                        battleLog += "The attack was nullified\r\n------------------------------------------------------------------\r\n"; //saves string to battle log to be output into the battleLogTxt
                     }
                     //special attack will be reduced by the block stat of player two's dragon
                     else if (spAttackOne > blockAttackTwo)
@@ -217,18 +225,18 @@ namespace Dragon_attack
                 if (hpTwo <= 0)
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player two's dragon's death. This is then added to the battleLog string variable
-                    battleLog += dragNameOne + " special attacks " + dragNameTwo + ", for " + spAttackOne + " damage, paralyzing themself for the next turn. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne +  " is the winner";
+                    battleLog += dragNameOne + " special attacks " + dragNameTwo + ", for " + spAttackOne + " damage, paralyzing themself for the next turn. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne + " is the winner\r\n------------------------------------------------------------------\r\n";
                     deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
                 }
                 else
                 {
                     //adds the damage calculation and explains the event of this player's turn which is saved to the battleLog variable
-                    battleLog += dragNameOne + " special attacks " + dragNameTwo + ", for " + spAttackOne + " damage, paralyzing themself for the next turn. " + dragNameTwo + " has " + hpTwo + " hp left\r\n";
+                    battleLog += dragNameOne + " special attacks " + dragNameTwo + ", for " + spAttackOne + " damage, paralyzing themself for the next turn. " + dragNameTwo + " has " + hpTwo + " hp left\r\n------------------------------------------------------------------\r\n";
                 }
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn = turn + 3; //turn is incremented by 2 so that player two can have 2 turns
+                turn = 2; //turn is incremented by 2 so that player two can have 2 turns
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
@@ -236,12 +244,13 @@ namespace Dragon_attack
 
             else if (playerTwoTurn) //determines if it is player two's turn
             {
+                playerTwoRest = true;
                 if (blockBoolOne) //true if player one's dragon is defending
                 {
                     //special attack is nullified if special attack is less than the block stat of player one's dragon
                     if (blockAttackOne >= spAttackTwo)
                     {
-                        battleLog += "The attack was nullified\r\n"; //saves string to battle log to be output into the battleLogTxt
+                        battleLog += "The attack was nullified\r\n------------------------------------------------------------------\r\n"; //saves string to battle log to be output into the battleLogTxt
                     }
                     //special attack will be reduced by the block stat of player two's dragon
                     else if (spAttackTwo > blockAttackOne)
@@ -261,18 +270,18 @@ namespace Dragon_attack
                 if (hpOne <= 0)
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player one's dragon's death. This is then added to the battleLog string variable
-                    battleLog += dragNameTwo + " special attacks " + dragNameOne + ", for " + spAttackTwo + " damage, paralyzing themself for the next turn. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner"; ;
+                    battleLog += dragNameTwo + " special attacks " + dragNameOne + ", for " + spAttackTwo + " damage, paralyzing themself for the next turn. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner\r\n------------------------------------------------------------------\r\n";
                     deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
                 }
                 else
                 {
                     //adds the damage calculation and explains the event of this player's turn which is saved to the battleLog variable
-                    battleLog += dragNameTwo + " special attacks " + dragNameOne + ", for " + spAttackTwo + " damage, paralyzing themself for the next turn. " + dragNameOne + " has " + hpOne + " hp left\r\n";
+                    battleLog += dragNameTwo + " special attacks " + dragNameOne + ", for " + spAttackTwo + " damage, paralyzing themself for the next turn. " + dragNameOne + " has " + hpOne + " hp left\r\n------------------------------------------------------------------\r\n";
                 }
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn = turn - 3; //turn is decremented by 2 so that player one can have 2 turns
+                turn = 1; //turn is decremented by 2 so that player one can have 2 turns
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
@@ -281,18 +290,20 @@ namespace Dragon_attack
             {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
+
+            Rest(playerTwoRest, playerOneRest);
         }
 
         //this method runs if the defend button is clicked and it determines if a dragon is defends
         private void defendBtn_Click(object sender, EventArgs e)
-        {            
+        {
             if (playerOneTurn) //determines if it is player one's turn
             {
                 blockBoolOne = true; //this indicates that player one is defending
                 blockBoolTwo = false;//this is in place so that player two's block wears off
 
                 //explains the event of this player's turn which is saved to the battleLog variable
-                battleLog += dragNameOne + " defends against " + dragNameTwo + "\r\n";
+                battleLog += dragNameOne + " defends against " + dragNameTwo + "\r\n------------------------------------------------------------------\r\n";
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
@@ -307,7 +318,7 @@ namespace Dragon_attack
                 blockBoolOne = false;//this is in place so that player one's block wears off
 
                 //explains the event of this player's turn which is saved to the battleLog variable
-                battleLog += dragNameTwo + " defends against " + dragNameOne + "\r\n";
+                battleLog += dragNameTwo + " defends against " + dragNameOne + "\r\n------------------------------------------------------------------\r\n";
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
@@ -320,6 +331,8 @@ namespace Dragon_attack
             {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
+
+            Rest(playerTwoRest, playerOneRest);
         }
 
         #region emptyVoidBtnsAndLbls
@@ -444,7 +457,7 @@ namespace Dragon_attack
                 count = 0; //this resets the count back to 0 so that we can restart the cycle
             }
         }
-        
+
         //this method is used to roll for who goes first
         public void initiative()
         {
@@ -455,7 +468,7 @@ namespace Dragon_attack
                 Random rollOne = new Random();
                 initiativeRollOne = rollOne.Next(1, 7);
 
-                battleLogTxt.Text += "Player One rolls for: " + initiativeRollOne + "\r\n"; //this displays the player's roll
+                battleLogTxt.Text += "Player One rolls for: " + initiativeRollOne + "\r\n------------------------------------------------------------------\r\n"; //this displays the player's roll
                 compareCount1++; //this variable is incremented to be the requirement for the next few steps
 
                 //these disable the roll buttons ability to be rolled so that we can only have 1 roll per attempt at rolling
@@ -472,11 +485,11 @@ namespace Dragon_attack
                 Random rollTwo = new Random();
                 initiativeRollTwo = rollTwo.Next(1, 7);
 
-                battleLogTxt.Text += "Player Two rolls for: " + initiativeRollTwo + "\r\n"; //this displays the player's roll
+                battleLogTxt.Text += "Player Two rolls for: " + initiativeRollTwo + "\r\n------------------------------------------------------------------\r\n"; //this displays the player's roll
                 compareCount2++; //this variable is incremented to be the requirement for the next few steps
 
                 //these disable the roll buttons ability to be rolled so that we can only have 1 roll per attempt at rolling
-                rollButtonTwo = false; 
+                rollButtonTwo = false;
                 rollBtn2.Enabled = false;
 
             }
@@ -501,7 +514,7 @@ namespace Dragon_attack
                 {
                     //this sets the turn order so that player One will go first
                     turn = 1;
-                    playerOneTurn = true; 
+                    playerOneTurn = true;
                     informationSwitch(); //calls the informationSwitch method in order to show players turn as well their information on the GUI
 
                     //this disables and hides the rollbuttons so that the player turns can take place without interfearence
@@ -512,7 +525,7 @@ namespace Dragon_attack
                     rollLbl.Hide();
                     rollLbl2.Hide();
 
-                    battleLogTxt.Text += "It is player 1's turn"; //This indicates whose turn it is
+                    battleLogTxt.Text += "It is player 1's turn\r\n------------------------------------------------------------------\r\n"; //This indicates whose turn it is
 
                     //these enable and show the attack buttons and labels so that the player turns can take place properly and not cause confusion of the missing features
                     attackBtn.Enabled = true;
@@ -549,7 +562,7 @@ namespace Dragon_attack
                     rollLbl.Hide();
                     rollLbl2.Hide();
 
-                    battleLogTxt.Text += "It is player 2's turn"; //This indicates whose turn it is
+                    battleLogTxt.Text += "It is player 2's turn\r\n------------------------------------------------------------------\r\n"; //This indicates whose turn it is
 
                     //these enable and show the attack buttons and labels so that the player turns can take place properly and not cause confusion of the missing features
                     attackBtn.Enabled = true;
@@ -573,11 +586,20 @@ namespace Dragon_attack
 
         }
 
+        public void Rest(bool playerTwoRest, bool playerOneRest)
+        {
+            if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest))
+            {
+                RestBtn.Show();
+            }
+
+        }
+
         //this method swaps player information as well as enables which player's turn it is
         public void informationSwitch()
         {
             //true if the run variable is less than one indicating player one's turn
-            if (turn <= 1) 
+            if (turn <= 1)
             {
                 //enables player one's turn and disables player two's turn
                 playerOneTurn = true;
@@ -601,7 +623,7 @@ namespace Dragon_attack
                 opponentTxtBox.Text = dragNameTwo + "\r\nHp:" + hpTwo; //displays player two's dragon's hp underneath its name
             }
 
-            if (!playerOneTurn) //true if player one's turn
+            if (!playerOneTurn) //true if not player one's turn
             {
                 //outputs the data from the code ,onto the gui, after calculations have been made 
                 hpLbl.Text = "Hp:" + hpTwo;//player one's dragon's hp stat is displayed
@@ -616,5 +638,21 @@ namespace Dragon_attack
 
         }
 
+        private void RestBtn_Click(object sender, EventArgs e)
+        {
+            if (playerOneTurn)
+            {
+                battleLog += dragNameTwo + " is too tired to fight and rests a while\r\n------------------------------------------------------------------\r\n";
+                RestBtn.Hide();
+            }
+            else if (playerTwoTurn)
+            {
+                battleLog += dragNameOne + " is too tired to fight and rests a while\r\n------------------------------------------------------------------\r\n";
+                RestBtn.Hide();
+            }
+            battleLogTxt.Text = battleLog;
+
+            
+        }
     }
 }

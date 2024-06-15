@@ -45,3 +45,14 @@ C:\Users\Riyaa\OneDrive\Documents\GADE\POE\POE\Part 1\Dragon-attack\Dragon-attac
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\POE\Part 1\Dragon-attack\Dragon-attack\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.CoreCompileInputs.cache
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\POE\Part 1\Dragon-attack\Dragon-attack\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.exe
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\POE\Part 1\Dragon-attack\Dragon-attack\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.pdb
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.exe.config
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.exe
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.pdb
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.AssemblyReference.cache
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.BattlePhase.resources
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.GADE5121_POE_Riyaad_Angus1.resources
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.Properties.Resources.resources
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.GenerateResource.cache
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.CoreCompileInputs.cache
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.exe
+C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.pdb
