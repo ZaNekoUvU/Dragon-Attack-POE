@@ -44,6 +44,7 @@ namespace Dragon_attack
         bool rollButtonOne = true;
         bool rollButtonTwo = true;
 
+        //boolean variables to check if a dragon needs to rest after a special attack
         bool playerOneRest = false;
         bool playerTwoRest = false;
 
@@ -133,7 +134,7 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn++; // turn is incremented so that it is now player two's turn
+                turn = 2; // turn is set to 2 so that it is now player two's turn
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
@@ -177,19 +178,21 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt 
 
-                turn--; // turn is decremented so that it is now player one's turn
+                turn = 1; // turn is set to 1 so that it is now player one's turn
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
-            
-
-            if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be greater than 2 and less than 1
+            //checks if either player needs to rest, else it will end the round
+            if (playerOneRest || playerTwoRest)
             {
-
+                Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
+            }
+            else if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be either 2 or 1
+            {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
-            Rest(playerTwoRest, playerOneRest);
+        
         }
 
         //this method runs if the special attack button is clicked and it determines which dragon attacks and determines if the other dragon is defending
@@ -198,7 +201,7 @@ namespace Dragon_attack
 
             if (playerOneTurn) //determines if it is player one's turn
             {
-                playerOneRest = true;
+                playerOneRest = true; //sets boolean to true so that player one will rest next turn
 
                 if (blockBoolTwo) //true if player two's dragon is defending
                 {
@@ -236,7 +239,7 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn = 2; //turn is incremented by 2 so that player two can have 2 turns
+                turn = 2; //turn is set to 2 so that it is player two's turn
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
@@ -244,7 +247,8 @@ namespace Dragon_attack
 
             else if (playerTwoTurn) //determines if it is player two's turn
             {
-                playerTwoRest = true;
+                playerTwoRest = true; //sets boolean to true so that player two will rest next turn
+
                 if (blockBoolOne) //true if player one's dragon is defending
                 {
                     //special attack is nullified if special attack is less than the block stat of player one's dragon
@@ -281,17 +285,21 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn = 1; //turn is decremented by 2 so that player one can have 2 turns
+                turn = 1; //turn is set to 1 so that it is player one's turn 
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
-            if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be greater than 2 and less than 1
+            //checks if either player needs to rest, else it will end the round
+            if (playerOneRest || playerTwoRest)
+            {
+                Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
+            }
+            else if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be either 2 or 1
             {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
-
-            Rest(playerTwoRest, playerOneRest);
+                      
         }
 
         //this method runs if the defend button is clicked and it determines if a dragon is defends
@@ -307,7 +315,7 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn++; // turn is incremented so that it is now player two's turn
+                turn = 2; // turn is set to 2 so that it is now player two's turn
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
@@ -322,17 +330,23 @@ namespace Dragon_attack
 
                 battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
 
-                turn--; // turn is decremented so that it is now player one's turn
+                turn = 1; // turn is set to 1 so that it is now player one's turn
                 count++; //count is incremented for the roll checker method
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
-            if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be greater than 2 and less than 1
+            //checks if either player needs to rest, else it will end the round
+            if (playerOneRest || playerTwoRest)
+            {
+                Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
+            }
+
+            else if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be either 1 or 2
             {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
-
-            Rest(playerTwoRest, playerOneRest);
+               
+            
         }
 
         #region emptyVoidBtnsAndLbls
@@ -586,11 +600,12 @@ namespace Dragon_attack
 
         }
 
+        //This method checks if it is the turn of the player who needs to rest and if they need to rest
         public void Rest(bool playerTwoRest, bool playerOneRest)
         {
-            if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest))
+            if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest)) 
             {
-                RestBtn.Show();
+                RestBtn.Show(); //shows the rest button if condition is true
             }
 
         }
@@ -638,21 +653,42 @@ namespace Dragon_attack
 
         }
 
+        //This runs when the Rest button is clicked
         private void RestBtn_Click(object sender, EventArgs e)
         {
-            if (playerOneTurn)
+            if (playerTwoTurn && playerTwoRest) //checks if it is player two's turn and if they need to rest
             {
                 battleLog += dragNameTwo + " is too tired to fight and rests a while\r\n------------------------------------------------------------------\r\n";
-                RestBtn.Hide();
+                playerTwoRest = false; //sets boolean to false so that it may later be set to true 
+
+                turn = 1; // turn is set to 1 so that it is now player one's turn
+                battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
+
+                informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
+
+                //Hides the rest button if neither player needs to rest
+                if (!playerOneRest && !playerTwoRest)
+                {
+                    RestBtn.Hide(); 
+                }
             }
-            else if (playerTwoTurn)
+
+            else if (playerOneTurn && playerOneRest) //checks if it is player one's turn and if they need to rest
             {
                 battleLog += dragNameOne + " is too tired to fight and rests a while\r\n------------------------------------------------------------------\r\n";
-                RestBtn.Hide();
-            }
-            battleLogTxt.Text = battleLog;
+                playerOneRest = false; //sets boolean to false so that it may later be set to true 
 
-            
+                turn = 2; //turn is set to 2 so that it is player two's turn
+                battleLogTxt.Text = battleLog; //the string that was saved to the battle log is ouputed to battleLogTxt
+
+                informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
+
+                //Hides the rest button if neither player needs to rest
+                if (!playerOneRest && !playerTwoRest)
+                {
+                    RestBtn.Hide(); 
+                }
+            }
         }
     }
 }
