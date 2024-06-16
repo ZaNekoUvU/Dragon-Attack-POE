@@ -63,6 +63,16 @@ namespace Dragon_attack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Dragon_Attack {
+            get {
+                object obj = ResourceManager.GetObject("Button Dragon Attack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Buttons {
             get {
                 object obj = ResourceManager.GetObject("Buttons", resourceCulture);
@@ -113,6 +123,16 @@ namespace Dragon_attack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Earth_Dragon3 {
+            get {
+                object obj = ResourceManager.GetObject("Earth Dragon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fire_Dragon {
             get {
                 object obj = ResourceManager.GetObject("Fire Dragon", resourceCulture);
@@ -126,6 +146,16 @@ namespace Dragon_attack.Properties {
         internal static System.Drawing.Bitmap Fire_Dragon1 {
             get {
                 object obj = ResourceManager.GetObject("Fire Dragon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fire_Dragon2 {
+            get {
+                object obj = ResourceManager.GetObject("Fire Dragon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +183,29 @@ namespace Dragon_attack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ice_Dragon2 {
+            get {
+                object obj = ResourceManager.GetObject("Ice Dragon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wind_Dragon {
             get {
                 object obj = ResourceManager.GetObject("Wind Dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wind_Dragon1 {
+            get {
+                object obj = ResourceManager.GetObject("Wind Dragon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

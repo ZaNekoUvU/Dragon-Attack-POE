@@ -121,17 +121,11 @@
   <data name="DragonAttackBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DragonAttackBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Earth Dragon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Earth Dragon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Earth Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Earth Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fire Dragon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fire Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Ice Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ice Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fire Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fire Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ice Dragon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ice Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +133,34 @@
   <data name="Wind Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wind Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fire Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fire Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wind Dragon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wind Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fire Dragon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fire Dragon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Buttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fire Dragon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fire Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Earth Dragon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Earth Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Buttons" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Buttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Earth Dragon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earth Dragon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earth Dragon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earth Dragon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earth Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earth Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ice Dragon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ice Dragon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Dragon Attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Dragon Attack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

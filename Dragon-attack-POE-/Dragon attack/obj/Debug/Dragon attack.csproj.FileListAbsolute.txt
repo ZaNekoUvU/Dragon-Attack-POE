@@ -56,3 +56,14 @@ C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.CoreCompileInputs.cache
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.exe
 C:\Users\Riyaa\OneDrive\Documents\GADE\POE\Dragon-Attack-POE\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.pdb
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.exe.config
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.exe
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\bin\Debug\Dragon attack.pdb
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.AssemblyReference.cache
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.BattlePhase.resources
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.GADE5121_POE_Riyaad_Angus1.resources
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon_attack.Properties.Resources.resources
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.GenerateResource.cache
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.csproj.CoreCompileInputs.cache
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.exe
+D:\Users\Angus\OneDrive\Documents\Vega\Git Repos\Dragon-attack-POE-\Dragon attack\obj\Debug\Dragon attack.pdb
