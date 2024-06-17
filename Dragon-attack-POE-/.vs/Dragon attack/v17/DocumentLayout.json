@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\onedrive\\documents\\vega\\git repos\\dragon-attack-poe-\\dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\onedrive\\documents\\vega\\git repos\\dragon-attack-poe-\\dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|d:\\users\\angus\\onedrive\\documents\\vega\\git repos\\dragon-attack-poe-\\dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|solutionrelative:dragon attack\\battlephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42A27819-5859-4527-9C8F-3CF15F904A33}|Dragon attack\\Dragon attack.csproj|D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\dragon attack\\gade5121_poe_riyaad-angus1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -41,17 +41,18 @@
               "ToolTip": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs [Design]",
               "RelativeToolTip": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:32:32.265Z"
+              "WhenOpened": "2024-05-16T19:32:32.265Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BattlePhase.cs",
               "DocumentMoniker": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
               "RelativeDocumentMoniker": "Dragon attack\\BattlePhase.cs",
               "ToolTip": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
               "RelativeToolTip": "Dragon attack\\BattlePhase.cs",
-              "ViewState": "AQIAAJYCAAAAAAAAAAAUwKQCAAAAAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwCkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T19:32:39.386Z",
               "EditorCaption": ""
@@ -64,9 +65,10 @@
               "RelativeDocumentMoniker": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
               "ToolTip": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
               "RelativeToolTip": "Dragon attack\\GADE5121_POE_Riyaad-Angus1.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAuwH0AAAAMAAAA",
+              "ViewState": "AQIAAIwBAAAAAAAAAAAkwNABAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T19:32:35.943Z"
+              "WhenOpened": "2024-05-16T19:32:35.943Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -76,7 +78,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BattlePhase.cs [Design]",
               "DocumentMoniker": "D:\\Users\\Angus\\OneDrive\\Documents\\Vega\\Git Repos\\Dragon-attack-POE-\\Dragon attack\\BattlePhase.cs",
               "RelativeDocumentMoniker": "Dragon attack\\BattlePhase.cs",

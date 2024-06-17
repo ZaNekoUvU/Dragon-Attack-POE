@@ -32,7 +32,6 @@ namespace Dragon_attack
         //boolean variables to check which players turn it is
         bool playerOneTurn = false;
         bool playerTwoTurn = false;
-        bool deadDrag = false;
 
         //stats for player two
         int hpTwo;
@@ -43,6 +42,8 @@ namespace Dragon_attack
 
         bool rollButtonOne = true;
         bool rollButtonTwo = true;
+
+        bool deadDrag = false;
 
         //boolean variables to check if a dragon needs to rest after a special attack
         bool playerOneRest = false;
@@ -89,7 +90,7 @@ namespace Dragon_attack
             blockAttackTwo = p2Values[3];
 
             initiative(); //calls the initiative method which will then roll the initiative roll variables on start, and if both initiative rolls are the same it the players will need to reroll by themselves
-   
+
         }
 
         //this method runs if the attack button is clicked and it determines which dragon attacks and determines if the other dragon is defending  
@@ -124,7 +125,9 @@ namespace Dragon_attack
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player two's dragon's death. This is then added to the battleLog string variable
                     battleLog += dragNameOne + " attacks " + dragNameTwo + " for " + attackOne + " damage. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne + " is the winner\r\n------------------------------------------------------------------\r\n";
-                    deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead 
+
+                    deadDrag = true;
+
                 }
                 else
                 {
@@ -168,7 +171,9 @@ namespace Dragon_attack
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player one's dragon's death. This is then added to the battleLog string variable
                     battleLog += dragNameTwo + " attacks " + dragNameOne + " for " + attackTwo + " damage. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner\r\n------------------------------------------------------------------\r\n";
-                    deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
+
+                    deadDrag = true;
+
                 }
                 else
                 {
@@ -183,16 +188,8 @@ namespace Dragon_attack
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
-            //checks if either player needs to rest, else it will end the round
-            if (playerOneRest || playerTwoRest)
-            {
-                Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
-            }
-            else if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be either 2 or 1
-            {
-                rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
-            }
-        
+            endPhase();
+
         }
 
         //this method runs if the special attack button is clicked and it determines which dragon attacks and determines if the other dragon is defending
@@ -229,7 +226,8 @@ namespace Dragon_attack
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player two's dragon's death. This is then added to the battleLog string variable
                     battleLog += dragNameOne + " special attacks " + dragNameTwo + ", for " + spAttackOne + " damage, paralyzing themself for the next turn. " + dragNameTwo + " has 0 hp left\r\n" + dragNameTwo + " is dead. " + playerNameOne + " is the winner\r\n------------------------------------------------------------------\r\n";
-                    deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
+
+                    deadDrag = true;
                 }
                 else
                 {
@@ -275,7 +273,8 @@ namespace Dragon_attack
                 {
                     //adds the damage calculation and explains the event of this player's turn which results in player one's dragon's death. This is then added to the battleLog string variable
                     battleLog += dragNameTwo + " special attacks " + dragNameOne + ", for " + spAttackTwo + " damage, paralyzing themself for the next turn. " + dragNameOne + " has 0 hp left\r\n" + dragNameOne + " is dead. " + playerNameTwo + " is the winner\r\n------------------------------------------------------------------\r\n";
-                    deadDrag = true; //boolean becomes true so that play will no longer continue once a dragon is dead
+
+                    deadDrag = true;
                 }
                 else
                 {
@@ -290,16 +289,8 @@ namespace Dragon_attack
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
-            //checks if either player needs to rest, else it will end the round
-            if (playerOneRest || playerTwoRest)
-            {
-                Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
-            }
-            else if (turn == 1 || turn == 2) //checks against the turn variable due to turn being able to be either 2 or 1
-            {
-                rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
-            }
-                      
+            endPhase();
+
         }
 
         //this method runs if the defend button is clicked and it determines if a dragon is defends
@@ -335,8 +326,25 @@ namespace Dragon_attack
                 informationSwitch(); //calls the informationSwitch method in order to swap players turn as well their information on the GUI
             }
 
+            endPhase();
+
+        }
+
+        private void endPhase()
+        {
+            if (deadDrag)
+            {
+                MessageBox.Show("Game Over \nPress the back button to restart"); //this is to create a closeable message box to say "Game Over"
+
+                //this disables the action buttons just to prevent any errors when hiding the buttons
+                attackBtn.Enabled = false;
+                spAttackBtn.Enabled = false;
+                blockBtn.Enabled = false;
+
+            }
+
             //checks if either player needs to rest, else it will end the round
-            if (playerOneRest || playerTwoRest)
+            else if (playerOneRest || playerTwoRest)
             {
                 Rest(playerTwoRest, playerOneRest); //Passes the rest variables to the rest method
             }
@@ -345,8 +353,6 @@ namespace Dragon_attack
             {
                 rollChecker(); //calls the roll checker method to check against count whether or not it should disable parts of the GUI
             }
-               
-            
         }
 
         #region emptyVoidBtnsAndLbls
@@ -413,32 +419,15 @@ namespace Dragon_attack
         //this methods runs if the first roll button is clicked 
         private void rollBtn_Click(object sender, EventArgs e)
         {
-            if (deadDrag) //this checks to see if the deadDrag bool is true or not, if it is, it will display a message box
-            {
-                MessageBox.Show("Game Over"); //this is to create a closeable message box to say "Game Over"
-            }
-
-            else //if the deadDrag bool is false, then the following code will play
-            {
-                rollButtonOne = true; //this is a bool to allow the specific 
-                initiative(); //this calls the initiative method
-            }
+            rollButtonOne = true; //this is a bool to allow the specific 
+            initiative(); //this calls the initiative method
         }
 
         //this methods runs if the second roll button is clicked 
         private void rollBtn2_Click(object sender, EventArgs e)
         {
-
-            if (deadDrag) //this checks to see if the deadDrag bool is true or not, if it is, it will display a message box
-            {
-                MessageBox.Show("Game Over"); //this is to create a closeable message box to say "Game Over"
-            }
-
-            else //if the deadDrag bool is false, then the following code will play
-            {
-                rollButtonTwo = true; //this is a bool to allow the specific 
-                initiative(); //this calls the initiative method
-            }
+            rollButtonTwo = true; //this is a bool to allow the specific 
+            initiative(); //this calls the initiative method
         }
 
         //this method checks the count number to see whether its time to roll for initiative or not
@@ -603,7 +592,7 @@ namespace Dragon_attack
         //This method checks if it is the turn of the player who needs to rest and if they need to rest
         public void Rest(bool playerTwoRest, bool playerOneRest)
         {
-            if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest)) 
+            if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest))
             {
                 RestBtn.Show(); //shows the rest button if condition is true
 
@@ -697,9 +686,9 @@ namespace Dragon_attack
                 {
                     RestBtn.Hide();
 
-                    attackBtn.Hide();
-                    spAttackBtn.Hide();
-                    blockBtn.Hide();
+                    attackBtn.Show();
+                    spAttackBtn.Show();
+                    blockBtn.Show();
                 }
             }
         }

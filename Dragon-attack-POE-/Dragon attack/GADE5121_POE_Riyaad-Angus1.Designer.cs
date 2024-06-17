@@ -78,11 +78,11 @@
             // PlayerNameLabel
             // 
             this.PlayerNameLabel.AutoSize = true;
-            this.PlayerNameLabel.Location = new System.Drawing.Point(46, 55);
+            this.PlayerNameLabel.Location = new System.Drawing.Point(44, 55);
             this.PlayerNameLabel.Name = "PlayerNameLabel";
-            this.PlayerNameLabel.Size = new System.Drawing.Size(70, 13);
+            this.PlayerNameLabel.Size = new System.Drawing.Size(79, 13);
             this.PlayerNameLabel.TabIndex = 0;
-            this.PlayerNameLabel.Text = "Player Name:";
+            this.PlayerNameLabel.Text = "Player 1 Name:";
             this.PlayerNameLabel.Click += new System.EventHandler(this.PlayerNameLabel_Click);
             // 
             // PlayerNametbx
@@ -104,16 +104,16 @@
             // DragonNameLabel
             // 
             this.DragonNameLabel.AutoSize = true;
-            this.DragonNameLabel.Location = new System.Drawing.Point(46, 109);
+            this.DragonNameLabel.Location = new System.Drawing.Point(44, 109);
             this.DragonNameLabel.Name = "DragonNameLabel";
-            this.DragonNameLabel.Size = new System.Drawing.Size(76, 13);
+            this.DragonNameLabel.Size = new System.Drawing.Size(85, 13);
             this.DragonNameLabel.TabIndex = 4;
-            this.DragonNameLabel.Text = "Dragon Name:";
+            this.DragonNameLabel.Text = "Dragon 1 Name:";
             this.DragonNameLabel.Click += new System.EventHandler(this.DragonNameLabel_Click);
             // 
             // StatTextBox1
             // 
-            this.StatTextBox1.Location = new System.Drawing.Point(46, 266);
+            this.StatTextBox1.Location = new System.Drawing.Point(44, 266);
             this.StatTextBox1.Multiline = true;
             this.StatTextBox1.Name = "StatTextBox1";
             this.StatTextBox1.Size = new System.Drawing.Size(133, 75);
@@ -124,7 +124,7 @@
             // 
             this.FireDragonCheck.AutoSize = true;
             this.FireDragonCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FireDragonCheck.Location = new System.Drawing.Point(46, 186);
+            this.FireDragonCheck.Location = new System.Drawing.Point(44, 186);
             this.FireDragonCheck.Name = "FireDragonCheck";
             this.FireDragonCheck.Size = new System.Drawing.Size(81, 17);
             this.FireDragonCheck.TabIndex = 9;
@@ -160,7 +160,7 @@
             // 
             this.IceDragonCheck.AutoSize = true;
             this.IceDragonCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IceDragonCheck.Location = new System.Drawing.Point(46, 161);
+            this.IceDragonCheck.Location = new System.Drawing.Point(44, 164);
             this.IceDragonCheck.Name = "IceDragonCheck";
             this.IceDragonCheck.Size = new System.Drawing.Size(79, 17);
             this.IceDragonCheck.TabIndex = 12;
@@ -236,11 +236,11 @@
             // DragonNameLabel2
             // 
             this.DragonNameLabel2.AutoSize = true;
-            this.DragonNameLabel2.Location = new System.Drawing.Point(612, 103);
+            this.DragonNameLabel2.Location = new System.Drawing.Point(603, 103);
             this.DragonNameLabel2.Name = "DragonNameLabel2";
-            this.DragonNameLabel2.Size = new System.Drawing.Size(76, 13);
+            this.DragonNameLabel2.Size = new System.Drawing.Size(85, 13);
             this.DragonNameLabel2.TabIndex = 16;
-            this.DragonNameLabel2.Text = "Dragon Name:";
+            this.DragonNameLabel2.Text = "Dragon 2 Name:";
             this.DragonNameLabel2.Click += new System.EventHandler(this.DragonNameLabel2_Click);
             // 
             // DragonNametbx2
@@ -255,7 +255,7 @@
             // 
             this.IceDragonCheck2.AutoSize = true;
             this.IceDragonCheck2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IceDragonCheck2.Location = new System.Drawing.Point(607, 161);
+            this.IceDragonCheck2.Location = new System.Drawing.Point(609, 164);
             this.IceDragonCheck2.Name = "IceDragonCheck2";
             this.IceDragonCheck2.Size = new System.Drawing.Size(79, 17);
             this.IceDragonCheck2.TabIndex = 21;
@@ -337,7 +337,7 @@
             this.SaveCharButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.SaveCharButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SaveCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveCharButton.Location = new System.Drawing.Point(47, 352);
+            this.SaveCharButton.Location = new System.Drawing.Point(44, 352);
             this.SaveCharButton.Name = "SaveCharButton";
             this.SaveCharButton.Size = new System.Drawing.Size(162, 32);
             this.SaveCharButton.TabIndex = 23;
