@@ -141,8 +141,11 @@
             // 
             this.BackButton.BackColor = System.Drawing.Color.SeaGreen;
             this.BackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackButton.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.BackButton.FlatAppearance.BorderSize = 3;
+            this.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Location = new System.Drawing.Point(638, 387);
             this.BackButton.Name = "BackButton";
@@ -155,10 +158,13 @@
             // rollBtn
             // 
             this.rollBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rollBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rollBtn.FlatAppearance.BorderSize = 3;
+            this.rollBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.rollBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.rollBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rollBtn.Location = new System.Drawing.Point(113, 161);
-            this.rollBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rollBtn.Margin = new System.Windows.Forms.Padding(2);
             this.rollBtn.Name = "rollBtn";
             this.rollBtn.Size = new System.Drawing.Size(134, 53);
             this.rollBtn.TabIndex = 12;
@@ -181,10 +187,13 @@
             // rollBtn2
             // 
             this.rollBtn2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rollBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rollBtn2.FlatAppearance.BorderSize = 3;
+            this.rollBtn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.rollBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.rollBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rollBtn2.Location = new System.Drawing.Point(477, 161);
-            this.rollBtn2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rollBtn2.Margin = new System.Windows.Forms.Padding(2);
             this.rollBtn2.Name = "rollBtn2";
             this.rollBtn2.Size = new System.Drawing.Size(134, 53);
             this.rollBtn2.TabIndex = 14;
@@ -209,6 +218,7 @@
             this.blockBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.blockBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("blockBtn.BackgroundImage")));
             this.blockBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blockBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.blockBtn.Enabled = false;
             this.blockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.blockBtn.Image = ((System.Drawing.Image)(resources.GetObject("blockBtn.Image")));
@@ -227,6 +237,7 @@
             this.spAttackBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.spAttackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spAttackBtn.BackgroundImage")));
             this.spAttackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.spAttackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.spAttackBtn.Enabled = false;
             this.spAttackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.spAttackBtn.Image = ((System.Drawing.Image)(resources.GetObject("spAttackBtn.Image")));
@@ -245,6 +256,7 @@
             this.attackBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.attackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("attackBtn.BackgroundImage")));
             this.attackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.attackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.attackBtn.Enabled = false;
             this.attackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.attackBtn.Image = global::Dragon_attack.Properties.Resources.Buttons;
@@ -263,6 +275,7 @@
             this.RestBtn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.RestBtn.BackgroundImage = global::Dragon_attack.Properties.Resources.Buttons;
             this.RestBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RestBtn.Location = new System.Drawing.Point(26, 103);
             this.RestBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -308,7 +321,7 @@
             this.Controls.Add(this.attackBtn);
             this.Controls.Add(this.RestBtn);
             this.Controls.Add(this.Background2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BattlePhase";
             this.Text = "battlePhase";
             this.Load += new System.EventHandler(this.battlePhase_Load);

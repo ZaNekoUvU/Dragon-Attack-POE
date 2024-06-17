@@ -606,6 +606,10 @@ namespace Dragon_attack
             if ((playerTwoTurn && playerTwoRest) || (playerOneTurn && playerOneRest)) 
             {
                 RestBtn.Show(); //shows the rest button if condition is true
+
+                attackBtn.Hide();
+                spAttackBtn.Hide();
+                blockBtn.Hide();
             }
 
         }
@@ -669,7 +673,12 @@ namespace Dragon_attack
                 //Hides the rest button if neither player needs to rest
                 if (!playerOneRest && !playerTwoRest)
                 {
-                    RestBtn.Hide(); 
+                    RestBtn.Hide();
+
+
+                    attackBtn.Show();
+                    spAttackBtn.Show();
+                    blockBtn.Show();
                 }
             }
 
@@ -686,7 +695,11 @@ namespace Dragon_attack
                 //Hides the rest button if neither player needs to rest
                 if (!playerOneRest && !playerTwoRest)
                 {
-                    RestBtn.Hide(); 
+                    RestBtn.Hide();
+
+                    attackBtn.Hide();
+                    spAttackBtn.Hide();
+                    blockBtn.Hide();
                 }
             }
         }

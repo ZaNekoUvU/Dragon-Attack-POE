@@ -334,7 +334,7 @@
             this.SaveCharButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.SaveCharButton.FlatAppearance.BorderSize = 3;
             this.SaveCharButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.SaveCharButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.SaveCharButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.SaveCharButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SaveCharButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveCharButton.Location = new System.Drawing.Point(47, 352);
@@ -353,7 +353,7 @@
             this.SaveCharButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.SaveCharButton2.FlatAppearance.BorderSize = 3;
             this.SaveCharButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.SaveCharButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.SaveCharButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.SaveCharButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SaveCharButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveCharButton2.Location = new System.Drawing.Point(526, 352);
