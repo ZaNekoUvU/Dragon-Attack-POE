@@ -606,15 +606,15 @@ namespace Dragon_attack
         //this method swaps player information as well as enables which player's turn it is
         public void informationSwitch()
         {
-            //true if the run variable is less than one indicating player one's turn
-            if (turn <= 1)
+            //true if the run variable is equal to one indicating player one's turn
+            if (turn == 1)
             {
                 //enables player one's turn and disables player two's turn
                 playerOneTurn = true;
                 playerTwoTurn = false;
             }
 
-            //true if the run variable is more than two indicating player two's turn
+            //true if the run variable is equal to two indicating player two's turn
             else
             {
                 //enables player two's turn and disables player one's turn

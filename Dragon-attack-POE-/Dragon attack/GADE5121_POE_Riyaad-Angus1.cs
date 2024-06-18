@@ -442,7 +442,7 @@ namespace Dragon_attack
             form2.ShowDialog(); //shows the new form
         }
 
-        #region textBox&Btn&Lbl
+         #region textBox&Btn&Lbl
 
         private void PlayerNametbx2_TextChanged(object sender, EventArgs e)
         {
